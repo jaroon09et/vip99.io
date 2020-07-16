@@ -200,3 +200,226 @@ height: $rccs-size / $rccs-card-ratio;
 
     &--discover {
       > div {
+color: $rccs-dark-text-color;
+      }
+
+      .rccs__card__background {
+        background: $rccs-discover-background;
+      }
+
+      .rccs__issuer {
+        background-image: url($rccs-discover-logo);
+      }
+    }
+
+    &--elo {
+      .rccs__card__background {
+        background: $rccs-elo-background;
+      }
+
+      .rccs__issuer {
+        background-image: url($rccs-elo-logo);
+      }
+    }
+
+    &--hipercard {
+      .rccs__card__background {
+        background: $rccs-hipercard-background;
+      }
+
+      .rccs__issuer {
+        background-image: url($rccs-hipercard-logo);
+      }
+    }
+
+    &--jcb {
+      .rccs__issuer {
+        background-image: url($rccs-jcb-logo);
+      }
+    }
+
+    &--laser {
+      .rccs__issuer {
+        background-image: url($rccs-laser-logo);
+      }
+    }
+
+    &--maestro,
+    &--mastercard {
+      > div {
+        color: $rccs-dark-text-color;
+      }
+
+      .rccs__card__background {
+        background: $rccs-mastercard-background;
+      }
+    }
+
+    &--maestro {
+      .rccs__issuer {
+        background-image: url($rccs-maestro-logo);
+      }
+    }
+
+    &--mastercard {
+      .rccs__issuer {
+        background-image: url($rccs-mastercard-logo);
+      }
+    }
+
+    &--unionpay {
+      .rccs__issuer {
+        background-image: url($rccs-unionpay-logo);
+      }
+    }
+
+    &--visa,
+    &--visaelectron {
+      .rccs__card__background {
+        background: $rccs-visa-background;
+      }
+
+      .rccs__issuer {
+        background-size: 75%;
+      }
+    }
+
+    &--visa {
+      .rccs__issuer {
+        background-image: url($rccs-visa-logo);
+      }
+    }
+
+    &--visaelectron {
+      .rccs__issuer {
+        background-image: url($rccs-visaelectron-logo);
+      }
+    }
+  }
+
+  &__number {
+    clear: both;
+    font-family: $rccs-number-font-family;
+    font-size: $rccs-number-font-size;
+    left: 10%;
+    position: absolute;
+    top: 45%;
+
+    &.rccs__number--large {
+      font-size: $rccs-number-font-size * 0.85;
+    }
+  }
+
+  &__name {
+    bottom: 15%;
+    font-family: $rccs-name-font-family;
+    font-size: $rccs-name-font-size;
+    left: 10%;
+    line-height: 1;
+    overflow: hidden;
+    position: absolute;
+    text-align: left;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    width: 60%;
+  }
+
+  &__expiry {
+    bottom: 15%;
+    font-size: 0;
+    line-height: 1;
+    position: absolute;
+    right: 10%;
+
+    > * {
+      vertical-align: middle;
+    }
+
+    &__valid {
+      font-size: $rccs-valid-font-size;
+      margin-bottom: 5px;
+    }
+
+    &__value {
+      font-family: $rccs-expiry-font-family;
+      font-size: $rccs-expiry-font-size;
+    }
+  }
+
+  &__number,
+  &__name,
+  &__expiry,
+  &__cvc {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+  }
+
+  &__chip {
+    background-image: url($rccs-chip-image);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: $rccs-size / 11;
+    left: 10%;
+    position: absolute;
+    top: 10%;
+    width: $rccs-size / 7;
+  }
+
+  &__issuer {
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 23%;
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    width: 40%;
+  }
+
+  &__stripe {
+    background-color: $rccs-stripe-bg-color;
+    height: 22%;
+    left: 0;
+    position: absolute;
+    top: 9%;
+    width: 100%;
+  }
+
+  &__signature {
+    background: $rccs-signature-background;
+    height: 18%;
+    left: 5%;
+    position: absolute;
+    top: 35%;
+    width: 75%;
+  }
+
+  &__cvc {
+    color: $rccs-cvc-color;
+    font-family: $rccs-cvc-font-family;
+    font-size: $rccs-cvc-font-size;
+    left: 67%;
+    line-height: 1;
+    position: absolute;
+    top: 42%;
+  }
+
+  &__cvc__front {
+    font-family: $rccs-cvc-font-family;
+    font-size: $rccs-cvc-font-size * 0.85;
+    opacity: 0;
+    position: absolute;
+    right: 10%;
+    top: 38%;
+    visibility: hidden;
+  }
+
+  &--filled {
+    opacity: 0.8 !important;
+  }
+
+  &--focused {
+    font-weight: 700;
+    opacity: 1 !important;
+  }
+}
