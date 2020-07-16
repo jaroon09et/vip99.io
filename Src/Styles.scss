@@ -70,3 +70,133 @@ $rccs-visaelectron-logo: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBl
   width: $rccs-size;
 
   &__card {
+height: $rccs-size / $rccs-card-ratio;
+    margin: 0 auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.4s linear;
+    width: $rccs-size;
+
+    &--front,
+    &--back {
+      backface-visibility: hidden;
+      background: $rccs-default-background;
+      border-radius: $rccs-size / 20;
+      color: $rccs-light-text-color;
+      height: 100%;
+      left: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      transform-style: preserve-3d;
+      width: 100%;
+
+      @if $rccs-shadow != '' {
+        box-shadow: $rccs-shadow;
+      }
+    }
+
+    &--front {
+      z-index: 20;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      .rccs__issuer {
+        background-position: bottom center;
+        bottom: 5%;
+        left: 50%;
+        opacity: 0.6;
+        right: auto;
+        top: auto;
+        transform: translateX(-50%);
+      }
+    }
+
+    &__background {
+      height: 200%;
+      left: -170%;
+      position: absolute;
+      top: -60%;
+      transform: rotate(25deg);
+      transition: $rccs-background-transition;
+      width: 150%;
+
+      @if $rccs-animate-background == true {
+        left: -170%;
+      } @else {
+        left: -22%;
+      }
+    }
+
+    &--flipped {
+      transform: rotateY(180deg);
+
+      .rccs__card--front {
+        z-index: 10;
+      }
+
+      .rccs__card--back {
+        z-index: 20;
+      }
+    }
+
+    &--unknown {
+      > div {
+        background: $rccs-unknown-background;
+        box-shadow: none;
+      }
+
+      .rccs__issuer {
+        visibility: hidden;
+      }
+    }
+
+    &:not(&--unknown) {
+      .rccs__card__background {
+        left: -22%;
+      }
+    }
+
+    &--amex {
+      .rccs__card__background {
+        background: $rccs-amex-background;
+      }
+
+      .rccs__issuer {
+        background-image: url($rccs-amex-logo);
+      }
+
+      .rccs__cvc__front {
+        opacity: 0.5;
+        visibility: visible;
+      }
+    }
+
+    &--dankort {
+      .rccs__card__background {
+        background: $rccs-dankort-background;
+      }
+
+      .rccs__issuer {
+        background-image: url($rccs-dankort-logo);
+      }
+    }
+
+    &--dinersclub {
+      > div {
+        color: $rccs-dark-text-color;
+      }
+
+      .rccs__card__background {
+        background: $rccs-dinersclub-background;
+      }
+
+      .rccs__issuer {
+        background-image: url($rccs-dinersclub-logo);
+      }
+    }
+
+    &--discover {
+      > div {
