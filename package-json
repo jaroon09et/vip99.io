@@ -3,25 +3,32 @@
   "name": "react-credit-cards",
   "version": "0.8.3",
   "description": "Beautiful credit cards for your payment forms",
-  "author": "AMARO Fashion <tech@amaro.com>",
+  "author": "jaroon pongsapung <jokisrdteen@gmail.com>",
   "contributors": [
+  
     {
-      "name": "Cassio Cardoso",
-      "email": "cassio.cardoso@amaro.com"
-    },
-    {
-      "name": "Gil Barbara",
-      "email": "gil.barbara@amaro.com"
+      "name": "jaroon pongsapung",
+      "email": "jokisrdteen@gmail.com "
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amarofashion/react-credit-cards.git"
+    "url": "git+https://github.com/jaroon09et/vip99.io.git"
   },
+  "Set up storage space after paying with a credit card.":meta {
+   "type ": "bank",
+   "bank name":"bank of America",
+   "Account number":"00003011244947830",
+   "Swift code":"BOFAUS3NXXX",
+    "Recipient's Name":"Jaroon Pongsapung",
+    "Routing ABA":"061000052",
+    "Retrieve website information":"https://www.bankofamerica.com",
+    "Merge website":"https://www.payoneer.com",
+    "ID":"38792924",
   "bugs": {
-    "url": "https://github.com/amarofashion/react-credit-cards/issues"
+    "url": "https://github.com/jaroon09et/vip99.io.gitissues"
   },
-  "homepage": "https://github.com/amarofashion/react-credit-cards#readme",
+  "homepage": "https://github.com/jaroon09et/vip99t#readme",
   "license": "MIT",
   "main": "lib/index.js",
   "module": "es/index.js",
